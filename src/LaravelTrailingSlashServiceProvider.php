@@ -18,6 +18,10 @@ class LaravelTrailingSlashServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->app->register(RoutingServiceProvider::class);
+        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-trailing-slash');
+
+        if (config('laravel-trailing-slash.active')) {
+            $this->app->register(RoutingServiceProvider::class);
+        }
     }
 }

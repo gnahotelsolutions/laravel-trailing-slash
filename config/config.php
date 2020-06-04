@@ -1,5 +1,8 @@
 <?php
 
 return [
-    'enabled' => env('TRAILING_SLASH_ENABLED', true)
+    /*
+     * You can turn off this package functionality changing to false this variable
+     */
+    'active' => env('TRAILING_SLASH', true)
 ];
