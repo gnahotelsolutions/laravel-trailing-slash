@@ -7,7 +7,6 @@ class TrailingSlashUrlGeneratorTest extends TestCase
     /** @test */
     public function url_ends_with_trailing_slash()
     {
-        $this->assertTrue(substr(url('profile'), -1) === '/');
         $this->assertStringEndsWith('/', url('profile'));
     }
 
