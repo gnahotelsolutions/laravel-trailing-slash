@@ -1,6 +1,6 @@
 <?php
 
-namespace GnaHotelSolutions\LaravelTrailingSlash\Tests;
+namespace GNAHotelSolutions\LaravelTrailingSlash\Tests;
 
 class TrailingSlashUrlGeneratorTest extends TestCase
 {

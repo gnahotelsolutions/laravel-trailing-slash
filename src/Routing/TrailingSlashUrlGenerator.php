@@ -1,6 +1,6 @@
 <?php
 
-namespace GnaHotelSolutions\LaravelTrailingSlash\Routing;
+namespace GNAHotelSolutions\LaravelTrailingSlash\Routing;
 
 use Illuminate\Routing\UrlGenerator;
 
