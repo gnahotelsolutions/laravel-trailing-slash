@@ -44,7 +44,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "GnaHotelSolutions\\LaravelTrailingSlash\\LaravelTrailingSlashServiceProvider"
+                "GnaHotelSolutions\\LaravelTrailingSlash\\Providers\\LaravelTrailingSlashServiceProvider"
             ]
         }
     }

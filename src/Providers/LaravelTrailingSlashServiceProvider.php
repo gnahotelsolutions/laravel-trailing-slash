@@ -1,15 +1,26 @@
 <?php
 
-namespace GnaHotelSolutions\LaravelTrailingSlash\Providers;
+namespace GnaHotelSolutions\LaravelTrailingSlash;
 
-use GnaHotelSolutions\LaravelTrailingSlash\Library\TrailingSlashUrlGenerator;
+use GnaHotelSolutions\LaravelTrailingSlash\Routing\TrailingSlashUrlGenerator;
 use Illuminate\Contracts\Routing\UrlGenerator;
 use Illuminate\Support\ServiceProvider;
 
-class RoutingServiceProvider extends ServiceProvider
+class LaravelTrailingSlashServiceProvider extends ServiceProvider
 {
+    public function boot()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__ . '/../config/config.php' => config_path('laravel-trailing-slash.php'),
+            ], 'config');
+        }
+    }
+
     public function register()
     {
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-trailing-slash');
+
         $this->app->singleton('url', function ($app) {
             $routes = $app['router']->getRoutes();
 
