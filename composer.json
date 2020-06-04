@@ -10,6 +10,11 @@
     "type": "library",
     "authors": [
         {
+            "name": "David Llop",
+            "email": "dllop@gnahs.com",
+            "role": "Developer"
+        },
+        {
             "name": "David Torralbo",
             "email": "dtorralbo@gnahs.com",
             "role": "Developer"
