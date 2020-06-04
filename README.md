@@ -21,7 +21,7 @@ When installed you are ready to go!
 
 Optionally, you can publish the config file of the package.
 
-```
+```bash
 php artisan vendor:publish --provider="GnaHotelSolutions\LaravelTrailingSlash\LaravelTrailingSlashServiceProvider" --tagconfig
 ```
 ## Disable Laravel Trailing Slash
