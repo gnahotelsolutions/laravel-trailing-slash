@@ -4,21 +4,17 @@ namespace GnaHotelSolutions\LaravelTrailingSlash\Tests;
 
 class TrailingSlashUrlGeneratorTest extends TestCase
 {
-    public function setUp(): void
-    {
-        parent::setUp();
-    }
-
     /** @test */
-    public function if_configuration_activator_is_enabled_url_ends_with_trailing_slash()
+    public function url_ends_with_trailing_slash()
     {
         $this->assertTrue(substr(url('profile'), -1) === '/');
+        $this->assertStringEndsWith('/', url('profile'));
     }
 
     /** @test */
-    public function if_configuration_activator_is_disabled_url_ends_with_no_trailing_slash()
+    public function url_does_not_end_with_trailing_slash_when_disabled()
     {
         config()->set('laravel-trailing-slash.active', false);
-        $this->assertFalse(substr(url('profile'), -1) === '/');
+        $this->assertStringEndsNotWith('/', url('profile'));
     }
 }
