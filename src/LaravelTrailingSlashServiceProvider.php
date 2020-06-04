@@ -11,17 +11,15 @@ class LaravelTrailingSlashServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->publishes([
-                __DIR__.'/../config/config.php' => config_path('laravel-trailing-slash.php'),
+                __DIR__ . '/../config/config.php' => config_path('laravel-trailing-slash.php'),
             ], 'config');
         }
     }
 
     public function register()
     {
-        $this->mergeConfigFrom(__DIR__.'/../config/config.php', 'laravel-trailing-slash');
+        $this->mergeConfigFrom(__DIR__ . '/../config/config.php', 'laravel-trailing-slash');
 
-        if (config('laravel-trailing-slash.active')) {
-            $this->app->register(RoutingServiceProvider::class);
-        }
+        $this->app->register(RoutingServiceProvider::class);
     }
 }

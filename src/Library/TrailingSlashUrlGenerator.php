@@ -17,6 +17,6 @@ class TrailingSlashUrlGenerator extends UrlGenerator
      */
     public function format($root, $path, $route = '')
     {
-        return parent::format($root, $path, $route) . '/';
+        return parent::format($root, $path, $route) . (config('laravel-trailing-slash.active') ? '/' : '');
     }
 }
