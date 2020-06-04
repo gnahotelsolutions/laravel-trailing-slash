@@ -2,8 +2,8 @@
 
 namespace GnaHotelSolutions\LaravelTrailingSlash\Tests;
 
+use GnaHotelSolutions\LaravelTrailingSlash\Providers\LaravelTrailingSlashServiceProvider;
 use Orchestra\Testbench\TestCase as BaseTestCase;
-use GnaHotelSolutions\LaravelTrailingSlash\LaravelTrailingSlashServiceProvider;
 
 class TestCase extends BaseTestCase
 {
