@@ -17,21 +17,19 @@ composer require gnahotelsolutions/laravel-trailing-slash
 
 ## Usage
 
-When installed you are ready to go!
-
 Optionally, you can publish the config file of the package.
 
 ```bash
 php artisan vendor:publish --provider="GnaHotelSolutions\LaravelTrailingSlash\LaravelTrailingSlashServiceProvider" --tag=config
 ```
-## Disable Laravel Trailing Slash
-Place this variable in your .env
+
+If you want to disable the behaviour of this package, use this variable in your `.env` file.
 
 ```
 TRAILING_SLASH=false
 ```
 
-## Disable Laravel Trailing Slash integration in tests
+If you want to disable the behaviour of this package just in certain areas of your application, you can modify the configuration on runtime.
 
 ```php
 config()->set('laravel-trailing-slash.active', false);
@@ -57,7 +55,8 @@ If you discover any security related issues, please email dtorralbo@gnahs.com in
 
 ## Credits
 
-- [David Torralbo](https://github.com/gnahotelsolutions)
+- [David Torralbo](https://github.com/torralbodavid)
+- [David Llop](https://github.com/lloople)
 - [All Contributors](../../contributors)
 
 ## License
