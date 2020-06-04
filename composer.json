@@ -1,0 +1,54 @@
+{
+    "name": "gnahotelsolutions/laravel-trailing-slash",
+    "description": "End your Laravel project routes with trailing slash",
+    "keywords": [
+        "gnahotelsolutions",
+        "laravel-trailing-slash"
+    ],
+    "homepage": "https://github.com/gnahotelsolutions/laravel-trailing-slash",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "David Torralbo",
+            "email": "dtorralbo@gnahs.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "GnaHotelSolutions\\LaravelTrailingSlash\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "GnaHotelSolutions\\LaravelTrailingSlash\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GnaHotelSolutions\\LaravelTrailingSlash\\LaravelTrailingSlashServiceProvider"
+            ],
+            "aliases": {
+                "LaravelTrailingSlash": "GnaHotelSolutions\\LaravelTrailingSlash\\LaravelTrailingSlashFacade"
+            }
+        }
+    }
+}
