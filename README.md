@@ -22,7 +22,7 @@ When installed you are ready to go!
 Optionally, you can publish the config file of the package.
 
 ```bash
-php artisan vendor:publish --provider="GnaHotelSolutions\LaravelTrailingSlash\LaravelTrailingSlashServiceProvider" --tagconfig
+php artisan vendor:publish --provider="GnaHotelSolutions\LaravelTrailingSlash\LaravelTrailingSlashServiceProvider" --tag=config
 ```
 ## Disable Laravel Trailing Slash
 Place this variable in your .env
