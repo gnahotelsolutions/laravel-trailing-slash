@@ -20,7 +20,7 @@ composer require gnahotelsolutions/laravel-trailing-slash
 Optionally, you can publish the config file of the package.
 
 ```bash
-php artisan vendor:publish --provider="GnaHotelSolutions\LaravelTrailingSlash\LaravelTrailingSlashServiceProvider" --tag=config
+php artisan vendor:publish --provider="GNAHotelSolutions\LaravelTrailingSlash\LaravelTrailingSlashServiceProvider" --tag=config
 ```
 
 If you want to disable the behaviour of this package, use this variable in your `.env` file.
