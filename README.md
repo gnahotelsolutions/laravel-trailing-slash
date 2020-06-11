@@ -38,9 +38,9 @@ config()->set('laravel-trailing-slash.active', false);
 If you are using Apache on your development or production environment, remember to remove or comment this lines in `public/.htaccess`
 
 ```
-    RewriteCond %{REQUEST_FILENAME} !-d
-    RewriteCond %{REQUEST_URI} (.+)/$
-    RewriteRule ^ %1 [L,R=301]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
 ```
 
 ### Testing
