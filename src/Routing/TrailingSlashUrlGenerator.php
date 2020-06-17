@@ -3,6 +3,7 @@
 namespace GNAHotelSolutions\LaravelTrailingSlash\Routing;
 
 use Illuminate\Routing\UrlGenerator;
+use Illuminate\Support\Str;
 
 class TrailingSlashUrlGenerator extends UrlGenerator
 {
@@ -17,10 +18,20 @@ class TrailingSlashUrlGenerator extends UrlGenerator
      */
     public function format($root, $path, $route = '')
     {
-        if (! config('laravel-trailing-slash.active', false)) {
+        if ($this->pathIsFile($path) || $this->packageIsDisabled()) {
             return parent::format($root, $path, $route);
         }
 
         return parent::format($root, $path, $route) . '/';
+    }
+
+    private function pathIsFile($path): bool
+    {
+        return Str::contains(Str::afterLast($path, '/'), '.');
+    }
+
+    private function packageIsDisabled(): bool
+    {
+        return ! config('laravel-trailing-slash.active', false);
     }
 }
