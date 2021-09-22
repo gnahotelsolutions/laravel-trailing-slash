@@ -1,7 +1,7 @@
 # Laravel trailing slash
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/gnahotelsolutions/laravel-trailing-slash.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/laravel-trailing-slash)
-[![Build Status](https://img.shields.io/travis/gnahotelsolutions/laravel-trailing-slash/master.svg?style=flat-square)](https://travis-ci.org/gnahotelsolutions/laravel-trailing-slash)
+![Build status](https://github.com/gnahotelsolutions/laravel-trailing-slash/actions/workflows/laravel.yml/badge.svg)
 [![Quality Score](https://img.shields.io/scrutinizer/g/gnahotelsolutions/laravel-trailing-slash.svg?style=flat-square)](https://scrutinizer-ci.com/g/gnahotelsolutions/laravel-trailing-slash)
 [![Total Downloads](https://img.shields.io/packagist/dt/gnahotelsolutions/laravel-trailing-slash.svg?style=flat-square)](https://packagist.org/packages/gnahotelsolutions/laravel-trailing-slash)
 
