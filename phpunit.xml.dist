@@ -3,7 +3,6 @@
          backupGlobals="false"
          colors="true"
          processIsolation="false"
-         displayDetailsOnPhpunitDeprecations="true"
          stopOnFailure="false">
     <testsuites>
         <testsuite name="Test Suite">
